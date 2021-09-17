@@ -9,9 +9,9 @@
         <link rel="stylesheet" href="style.css">
         <title>Vue Slider</title>
     </head>
-    
-    <body>
 
+    <body>
+        <!-- id=root da associare al data vuejs -->
         <div id="root">
 
             <div class="box-carousel">
@@ -19,18 +19,19 @@
                 <div class="carousel">
 
                     <div class="left-carousel">
-                        <i class="fas fa-chevron-left"></i>
+                        <i class="fas fa-chevron-left" @click="imagePrev()"></i>
                     </div>
 
                     <div class="carousel-images">
-                        <img src="" alt="">
+                        <img :src="images[imageIndex]">
                         <div class="carousel-balls">
-                            <i class="fas fa-circle"></i>
+                            <!-- passiamo con l'espressione ternaria v-for => l'active ai pallini -->
+                            <i class="fas fa-circle " v-for="(image, index) in images" :class=" imageIndex == index ? 'active' : '' " "></i>
                         </div>
                     </div>
 
                     <div class="right-carousel">
-                        <i class="fas fa-chevron-right"></i>
+                        <i class="fas fa-chevron-right" @click="imageNext()"></i>
                     </div>
                         
                 </div>
