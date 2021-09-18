@@ -6,10 +6,10 @@ const app = new Vue({
     data: {
         /* elementi in un'array */
         images: [
-            "img/amsterdam.jpg",
-            "img/moscow.jpg",
-            "img/paris.jpg",
-            "img/rome.jpg"
+            "img/rome.jpg",
+            "img/madrid.jpg",
+            "img/london.jpg",
+            "img/berlin.jpg"
         ],
         /* indiciziamo a 0 una var per poterla usare con i cicli di confronto */
         imageIndex: 0 

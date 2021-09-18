@@ -12,9 +12,9 @@
 
     <body>
         <!-- id=root da associare al data vuejs -->
-        <div id="root">
+        <div id="root" class="box-carousel">
 
-            <div class="box-carousel">
+            
 
                 <div class="carousel">
 
@@ -26,7 +26,7 @@
                         <img :src="images[imageIndex]">
                         <div class="carousel-balls">
                             <!-- passiamo con l'espressione ternaria v-for => l'active ai pallini -->
-                            <i class="fas fa-circle " v-for="(image, index) in images" :class=" imageIndex == index ? 'active' : '' " "></i>
+                            <i class="fas fa-circle " v-for="(image, index) in images" :class=" imageIndex == index ? 'active' : '' "></i>
                         </div>
                     </div>
 
@@ -36,7 +36,7 @@
                         
                 </div>
 
-            </div>
+            
 
         </div>
 

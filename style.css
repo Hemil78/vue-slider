@@ -7,44 +7,57 @@
 body{
     font-family: 'Dancing Script', cursive;
     height: 100vh;
-    display: flex;   
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(39, 39, 38);
+
 }
 .box-carousel{
     width: 70%;
-    height: 50vh;
-    margin: auto;
-    margin-top: 40px;
+    height: 60vh;
+     
 }
+
 .carousel{
-    width: 100%;
     display: flex;
     align-items: center;
 }
 .carousel-images{
     width: 100%;
     position: relative;
-    
 }
 .carousel-images img{
     width: 100%;
+    object-fit: cover;
+    padding: 0 10px;
 }
 .carousel-balls{
     position: absolute;
     bottom: 20px;
     left: 50%;
-    transform: translate( - 50%);
+    transform: translateX(-50%);
 }
-.carousel-balls i{
-    color: #fff;
+.carousel-balls  i{
+    color: rgb(121, 120, 120);
+    border: 2px solid rgb(197, 197, 197);
+    border-radius: 50%;
     margin-left: 10px;
+    font-size: 10px;
+    opacity: .8;
 }
 .carousel-balls i.active{
-    color: red;
+    color: rgb(197, 197, 197);
 }
 .left-carousel,
 .right-carousel{
-    color:red;
+    color:rgb(85, 85, 85);
     font-size: 50px;
+}
+.left-carousel:hover,
+.right-carousel:hover{
+    color: rgb(197, 197, 197);
+    transition: .5s;
 }
     
     
