@@ -49,7 +49,7 @@ const app = new Vue({
             let app = this;
             this.timer = setInterval(function() {
               app.imageNext();
-            }, 2000);
+            }, 3000);
         }   
     },
     created: function() {
