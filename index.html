@@ -11,32 +11,41 @@
     </head>
 
     <body>
-        <!-- id=root da associare al data vuejs -->
-        <div id="root" class="box-carousel">
+        
+        <div class="box-carousel">
+         <!-- id=root da associare al data vuejs --> 
+            <div id="root">
 
-            
-            <div class="carousel">
+                <div class="carousel">
 
-                <div class="left-carousel">
-                    <i class="fas fa-chevron-left" @click="imagePrev()"></i>
-                </div>
+                    <div class="carousel-images">
 
-                <div class="carousel-images">
+                        <img :src="images[imageIndex]">
 
-                    <img :src="images[imageIndex]">
-                    <div class="carousel-balls">
-                        <i class="fas fa-circle " v-for="(image, index) in images" :class="isBallActive(index)" @click="selectSlide(index)"></i>
+                        <div class="left-carousel">
+                            <i class="fas fa-chevron-left" @click="imagePrev()"></i>
+                        </div>
+
+                        <div class="carousel-balls">
+                            <i class="fas fa-circle " v-for="(image, index) in images" :class="isBallActive(index)" @click="selectSlide(index)"></i>
+                        </div>
+
+                        <div class="right-carousel">
+                            <i class="fas fa-chevron-right" @click="imageNext()"></i>
+                        </div>
+
                     </div>
 
                 </div>
-
-                <div class="right-carousel">
-                    <i class="fas fa-chevron-right" @click="imageNext()"></i>
-                </div>
                     
             </div>
-                
+
         </div>
+                    
+                
+
+                    
+                        
     
         <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
         <script src="main.js"></script>
